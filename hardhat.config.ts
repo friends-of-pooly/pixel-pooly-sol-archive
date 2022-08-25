@@ -1,4 +1,6 @@
-import 'dotenv/config';
+import * as dotenv from "dotenv";
+dotenv.config();
+
 import '@nomiclabs/hardhat-etherscan';
 import '@typechain/hardhat';
 import '@nomiclabs/hardhat-ethers';
@@ -11,6 +13,7 @@ import 'hardhat-gas-reporter';
 import 'solidity-coverage';
 import { HardhatUserConfig } from 'hardhat/config';
 import networks from './hardhat.network';
+
 
 const optimizerEnabled = !process.env.OPTIMIZER_DISABLED;
 
