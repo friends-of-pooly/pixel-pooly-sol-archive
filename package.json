@@ -76,6 +76,8 @@
     "deploy/**"
   ],
   "dependencies": {
+    "@erc721k/core-sol": "^0.0.0-beta.0",
+    "@erc721k/periphery-sol": "^0.0.0-beta.0",
     "@foundry-rs/hardhat": "^0.1.6",
     "@foundry-rs/hardhat-anvil": "^0.1.5",
     "@foundry-rs/hardhat-forge": "^0.1.7",

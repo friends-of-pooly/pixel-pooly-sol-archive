@@ -46,6 +46,20 @@
   resolved "https://registry.yarnpkg.com/@ensdomains/resolver/-/resolver-0.2.4.tgz#c10fe28bf5efbf49bff4666d909aed0265efbc89"
   integrity sha512-bvaTH34PMCbv6anRa9I/0zjLJgY4EuznbEMgbV77JBCQ9KNC46rzi0avuxpOfu+xDjPEtSFGqVEOr5GlUSGudA==
 
+"@erc721k/core-sol@^0.0.0-beta.0":
+  version "0.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@erc721k/core-sol/-/core-sol-0.0.0-beta.0.tgz#befc967cc5cf9582a183004e70f9bf4438eba233"
+  integrity sha512-SLNhQxm9mZKk7aO5Whx8mCKcPpIzqHwBjBTlvrnuMJyuAFy2uaNtD+QbDNKJ1mXfPaeUIYqeHHDxZyuNgYMoMw==
+  dependencies:
+    "@openzeppelin/contracts" "^4.6.0"
+
+"@erc721k/periphery-sol@^0.0.0-beta.0":
+  version "0.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@erc721k/periphery-sol/-/periphery-sol-0.0.0-beta.0.tgz#bf79bfea8adf513ae9f1dc658a4e6563534fac88"
+  integrity sha512-Jr6uDvw+Z/x+MQPVthG32YUCQ5jVIuKmpaXT3ZHWD01Z3vIn7FTnjQmWxl3KEWAzaHc0Dl0HUhmcK7d1bolJ7w==
+  dependencies:
+    "@openzeppelin/contracts" "^4.6.0"
+
 "@ethereum-waffle/chai@^3.4.0":
   version "3.4.4"
   resolved "https://registry.yarnpkg.com/@ethereum-waffle/chai/-/chai-3.4.4.tgz#16c4cc877df31b035d6d92486dfdf983df9138ff"
