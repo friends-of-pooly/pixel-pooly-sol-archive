@@ -31,7 +31,17 @@ contract PoolyPixelTraits is ITraitsFetch, Ownable {
     pure
     returns (string memory __traits)
   {
-    return string.concat('{"trait_type":' '"', _key, '",', '"value":', '"', _value, '"}');
+    return
+      string.concat(
+        '{"trait_type":'
+        '"',
+        _key,
+        '",',
+        '"value":',
+        '"',
+        _value,
+        '"}'
+      );
   }
 
   function _generateTraits(string[] memory _keys, string[] memory _values)

@@ -141,4 +141,4 @@ export default `
   </g>
 </svg>
 
-`
+`;

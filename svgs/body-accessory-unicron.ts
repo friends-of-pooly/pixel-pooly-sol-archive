@@ -119,4 +119,4 @@ export default `<svg
   </g>
 </svg>
 
-`
+`;
