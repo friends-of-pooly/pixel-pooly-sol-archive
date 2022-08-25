@@ -6,7 +6,7 @@ import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
 import { svg } from "@erc721k/periphery-sol/contracts/svg/svg.sol";
 import { svgUtils } from "@erc721k/periphery-sol/contracts/svg/svgUtils.sol";
 import { SVGLibrary } from "@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol";
-import { ISVGModule } from "../interfaces/ISVGModule.sol";
+import { ISVGModule } from "@erc721k/periphery-sol/contracts/interfaces/ISVGModule.sol";
 
 contract PoolyPixelSvgModule is ISVGModule, Ownable {
   SVGLibrary private svgLibrary;
@@ -43,7 +43,7 @@ contract PoolyPixelSvgModule is ISVGModule, Ownable {
   }
 
   function _color(string memory _sig, string memory _value) internal view returns (string memory) {
-    return _svgLibrary.execute(COLOR, abi.encodeWithSignature(_sig, _value));
+    return svgLibrary.execute(COLOR, abi.encodeWithSignature(_sig, _value));
   }
 
   function _props(string memory _key, string memory _value) internal view returns (string memory) {
