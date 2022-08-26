@@ -11,18 +11,15 @@ import { PoolyPixelRender } from "./PoolyPixelRender.sol";
  * @author Kames Geraghty
  */
 contract PixelPooly is ERC721K {
-
-
- /**
-  * @notice Metadata
-  * @param image       encoded byte data of the svg image
-  * @param traits      encoded byte data of the traits
-  */
+  /**
+   * @notice Metadata
+   * @param image       encoded byte data of the svg image
+   * @param traits      encoded byte data of the traits
+   */
   struct Metadata {
     bytes image;
     bytes traits;
   }
-
 
   /**
    * @notice PixelPooly Construction
@@ -35,7 +32,6 @@ contract PixelPooly is ERC721K {
     string memory symbol,
     address erc721Storage
   ) ERC721K(name, symbol, erc721Storage) {}
-
 
   /// @notice TokenID mapped to the svg metadata bytes
   mapping(uint256 => Metadata) internal tokenIdToMetadata;
@@ -52,7 +48,6 @@ contract PixelPooly is ERC721K {
     uint256 tokenId = _issue(_msgSender(), ++_idCounter);
     tokenIdToMetadata[tokenId] = Metadata(_image, _traits);
   }
-
 
   /* ===================================================================================== */
   /* Internal Functions                                                                    */
