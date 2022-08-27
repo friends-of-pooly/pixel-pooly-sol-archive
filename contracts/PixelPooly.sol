@@ -93,7 +93,10 @@ contract PixelPooly is ERC721K {
   }
 
   // TODO: internal function to validate traits picked and amount of eth sent in
-  function _validateMetadata(uint256 _ethReceived, bytes memory _image) internal returns (bytes memory) {
+  function _validateMetadata(uint256 _ethReceived, bytes memory _image)
+    internal
+    returns (bytes memory)
+  {
     (uint8 head, uint8 body, uint8 headAcc, uint8 bodyAcc, uint8 bg, uint8 handAcc) = abi.decode(
       _image,
       (uint8, uint8, uint8, uint8, uint8, uint8)
@@ -122,7 +125,7 @@ contract PixelPooly is ERC721K {
       cost += tierToPrice[mTrait.tier];
 
       // check for expiry time
-      if (mTrait.expiry > 0){
+      if (mTrait.expiry > 0) {
         // if expiry is 0 then it does not expire
         require(block.timestamp < mTrait.expiry, "PIXEL-POOLY:expired-trait");
       }

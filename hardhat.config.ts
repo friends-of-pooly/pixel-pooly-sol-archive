@@ -30,14 +30,14 @@ const config: HardhatUserConfig = {
   },
   dependencyCompiler: {
     paths: [
-          '@erc721k/core-sol/contracts/ERC721K.sol',
-          '@erc721k/core-sol/contracts/ERC721Storage.sol',
-          '@erc721k/periphery-sol/contracts/svg/svg.sol',
-          '@erc721k/periphery-sol/contracts/svg/svgUtils.sol',
-          '@erc721k/periphery-sol/contracts/svg/SVGColor.sol',
-          '@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol',
-          '@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol',
-      ],
+      '@erc721k/core-sol/contracts/ERC721K.sol',
+      '@erc721k/core-sol/contracts/ERC721Storage.sol',
+      '@erc721k/periphery-sol/contracts/svg/svg.sol',
+      '@erc721k/periphery-sol/contracts/svg/svgUtils.sol',
+      '@erc721k/periphery-sol/contracts/svg/SVGColor.sol',
+      '@erc721k/periphery-sol/contracts/svg/SVGLibrary.sol',
+      '@erc721k/periphery-sol/contracts/svg/SVGRegistry.sol',
+    ],
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
