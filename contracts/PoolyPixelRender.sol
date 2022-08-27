@@ -36,9 +36,9 @@ contract PoolyPixelRender is Ownable {
   }
 
   function _render(bytes memory _input) internal view returns (string memory) {
-    (uint8 head, uint8 body, uint8 headAcc, uint8 bodyAcc, uint8 bg) = abi.decode(
+    (uint8 head, uint8 body, uint8 headAcc, uint8 bodyAcc, uint8 bg, uint8 handAcc) = abi.decode(
       _input,
-      (uint8, uint8, uint8, uint8, uint8)
+      (uint8, uint8, uint8, uint8, uint8, uint8)
     );
     return
       string(
@@ -49,6 +49,7 @@ contract PoolyPixelRender is Ownable {
           _registry(PIXEL_POOLY_V0, abi.encode(1, body)),
           _registry(PIXEL_POOLY_V0, abi.encode(2, headAcc)),
           _registry(PIXEL_POOLY_V0, abi.encode(3, bodyAcc)),
+          _registry(PIXEL_POOLY_V0, abi.encode(5, handAcc)),
           svg.end()
         )
       );
