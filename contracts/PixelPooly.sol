@@ -4,12 +4,13 @@ pragma solidity 0.8.15;
 import "hardhat/console.sol";
 import { ERC721K } from "@erc721k/core-sol/contracts/ERC721K.sol";
 import { ERC721Storage } from "@erc721k/core-sol/contracts/ERC721Storage.sol";
+import {LicenseVersion, CantBeEvil} from "@a16z/contracts/licenses/CantBeEvil.sol";
 
 /**
  * @title PixelPooly
  * @author Kames Geraghty
  */
-contract PixelPooly is ERC721K {
+contract PixelPooly is ERC721K, CantBeEvil {
   /**
    * @notice Metadata
    * @param image       encoded byte data of the svg image
@@ -50,7 +51,7 @@ contract PixelPooly is ERC721K {
     string memory name,
     string memory symbol,
     address erc721Storage
-  ) ERC721K(name, symbol, erc721Storage) {}
+  ) ERC721K(name, symbol, erc721Storage) CantBeEvil(LicenseVersion.CBE_NECR_HS) {}
 
   /// @notice TokenID mapped to the svg metadata bytes
   mapping(uint256 => Metadata) internal tokenIdToMetadata;
@@ -60,6 +61,19 @@ contract PixelPooly is ERC721K {
 
   /// @notice Trait hash to trait details
   mapping(bytes32 => Trait) internal traitMap;
+
+  /* ===================================================================================== */
+  /* EIP Functions                                                                     */
+  /* ===================================================================================== */
+  function supportsInterface(bytes4 interfaceId)
+    public
+    view
+    virtual
+    override(CantBeEvil, ERC721K)
+    returns (bool)
+  {
+    return super.supportsInterface(interfaceId);
+  }
 
   /* ===================================================================================== */
   /* External Functions                                                                    */

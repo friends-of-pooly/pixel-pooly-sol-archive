@@ -8,6 +8,7 @@
     "build": "hardhat --show-stack-traces --max-memory 8192 compile",
     "clean": "rm -rf cache/ artifacts/",
     "compile": "hardhat --show-stack-traces --max-memory 8192 compile",
+    "console": "hardhat console",
     "coverage": "HIDE_DEPLOY_LOG=true OPTIMIZER_DISABLED=true hardhat coverage",
     "chain": "hardhat node --network hardhat",
     "chain:fork": "FORK_ENABLED=true hardhat node --network hardhat",
@@ -77,6 +78,7 @@
     "deploy/**"
   ],
   "dependencies": {
+    "@a16z/contracts": "^0.0.8",
     "@erc721k/core-sol": "^0.0.0-beta.0",
     "@erc721k/periphery-sol": "^0.0.0-beta.0",
     "@foundry-rs/hardhat": "^0.1.6",
