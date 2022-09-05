@@ -4,7 +4,7 @@ pragma solidity 0.8.15;
 import "hardhat/console.sol";
 import { ERC721K } from "@erc721k/core-sol/contracts/ERC721K.sol";
 import { ERC721Storage } from "@erc721k/core-sol/contracts/ERC721Storage.sol";
-import {LicenseVersion, CantBeEvil} from "@a16z/contracts/licenses/CantBeEvil.sol";
+import { LicenseVersion, CantBeEvil } from "@a16z/contracts/licenses/CantBeEvil.sol";
 
 /**
  * @title PixelPooly
