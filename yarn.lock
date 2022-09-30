@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@a16z/contracts@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@a16z/contracts/-/contracts-0.0.8.tgz#91da2191c18432fffb148e3f2bd9e5579fd56f0f"
+  integrity sha512-jG+sZxH/xFQw8PFjLcNOZVUd2IKzAExfV3AH8uaxxG01BAyvSrOKhlEYDUK9j/eqJ4Mqwt+FWlcdxvD3DRmHyQ==
+  dependencies:
+    "@openzeppelin/contracts" "^4.7.2"
+
 "@babel/code-frame@^7.0.0":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.18.6.tgz#3b25d38c89600baa2dcc219edfa88a74eb2c427a"
@@ -45,6 +52,20 @@
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/@ensdomains/resolver/-/resolver-0.2.4.tgz#c10fe28bf5efbf49bff4666d909aed0265efbc89"
   integrity sha512-bvaTH34PMCbv6anRa9I/0zjLJgY4EuznbEMgbV77JBCQ9KNC46rzi0avuxpOfu+xDjPEtSFGqVEOr5GlUSGudA==
+
+"@erc721k/core-sol@^0.0.0-beta.0":
+  version "0.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@erc721k/core-sol/-/core-sol-0.0.0-beta.0.tgz#befc967cc5cf9582a183004e70f9bf4438eba233"
+  integrity sha512-SLNhQxm9mZKk7aO5Whx8mCKcPpIzqHwBjBTlvrnuMJyuAFy2uaNtD+QbDNKJ1mXfPaeUIYqeHHDxZyuNgYMoMw==
+  dependencies:
+    "@openzeppelin/contracts" "^4.6.0"
+
+"@erc721k/periphery-sol@^0.0.0-beta.0":
+  version "0.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@erc721k/periphery-sol/-/periphery-sol-0.0.0-beta.0.tgz#bf79bfea8adf513ae9f1dc658a4e6563534fac88"
+  integrity sha512-Jr6uDvw+Z/x+MQPVthG32YUCQ5jVIuKmpaXT3ZHWD01Z3vIn7FTnjQmWxl3KEWAzaHc0Dl0HUhmcK7d1bolJ7w==
+  dependencies:
+    "@openzeppelin/contracts" "^4.6.0"
 
 "@ethereum-waffle/chai@^3.4.0":
   version "3.4.4"
@@ -789,7 +810,7 @@
     widest-line "^3.1.0"
     wrap-ansi "^6.2.0"
 
-"@openzeppelin/contracts@^4.6.0":
+"@openzeppelin/contracts@^4.6.0", "@openzeppelin/contracts@^4.7.2":
   version "4.7.3"
   resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-4.7.3.tgz#939534757a81f8d69cc854c7692805684ff3111e"
   integrity sha512-dGRS0agJzu8ybo44pCIf3xBaPQN/65AIXNgK8+4gzKd5kbvlqyxryUYVLJv7fK98Seyd2hDZzVEHSWAh0Bt1Yw==

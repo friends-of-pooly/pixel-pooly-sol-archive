@@ -24,21 +24,21 @@ contract PoolyPixelRender is Ownable {
   /* External Functions                                                                    */
   /* ===================================================================================== */
 
-  function render(bytes memory input) external view returns (string memory) {
-    return encodeSvgToDataURI(_render(input));
+  function render(bytes memory _input) external view returns (string memory) {
+    return encodeSvgToDataURI(_render(_input));
   }
 
   /* ===================================================================================== */
   /* Internal Functions                                                                    */
   /* ===================================================================================== */
-  function encodeSvgToDataURI(string memory data) internal view returns (string memory) {
-    return string(abi.encodePacked(ENCODING, Base64.encode(bytes(data))));
+  function encodeSvgToDataURI(string memory _data) internal view returns (string memory) {
+    return string(abi.encodePacked(ENCODING, Base64.encode(bytes(_data))));
   }
 
-  function _render(bytes memory input) internal view returns (string memory) {
-    (uint8 head, uint8 body, uint8 headAcc, uint8 bodyAcc, uint8 bg) = abi.decode(
-      input,
-      (uint8, uint8, uint8, uint8, uint8)
+  function _render(bytes memory _input) internal view returns (string memory) {
+    (uint8 head, uint8 body, uint8 headAcc, uint8 bodyAcc, uint8 bg, uint8 handAcc) = abi.decode(
+      _input,
+      (uint8, uint8, uint8, uint8, uint8, uint8)
     );
     return
       string(
@@ -49,6 +49,7 @@ contract PoolyPixelRender is Ownable {
           _registry(PIXEL_POOLY_V0, abi.encode(1, body)),
           _registry(PIXEL_POOLY_V0, abi.encode(2, headAcc)),
           _registry(PIXEL_POOLY_V0, abi.encode(3, bodyAcc)),
+          _registry(PIXEL_POOLY_V0, abi.encode(5, handAcc)),
           svg.end()
         )
       );

@@ -3,8 +3,8 @@ pragma solidity 0.8.15;
 
 import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
 import { Strings } from "@openzeppelin/contracts/utils/Strings.sol";
-import { IStream } from "../interfaces/IStream.sol";
-import { ITraitsFetch } from "../interfaces/ITraitsFetch.sol";
+import { IStream } from "@erc721k/core-sol/contracts/interfaces/IStream.sol";
+import { ITraitsFetch } from "@erc721k/periphery-sol/contracts/interfaces/ITraitsFetch.sol";
 
 /**
  * @title PoolyPixelTraits

@@ -16,10 +16,10 @@ contract PoolyPixelStorage is ERC721Storage {
   ) ERC721Storage(_svgRender_, _traitsFetch_, _contractURI_) {}
 
   function _parseName(uint256 _tokenId) internal view override returns (string memory) {
-    return string.concat("PoolyPixel #", Strings.toString(_tokenId));
+    return string.concat("PixelPooly #", Strings.toString(_tokenId));
   }
 
   function _parseDescription(uint256 _tokenId) internal view override returns (string memory) {
-    return string.concat("Member #", Strings.toString(_tokenId), " of PoolyPixel.");
+    return string.concat("Member #", Strings.toString(_tokenId), " of PixelPooly.");
   }
 }

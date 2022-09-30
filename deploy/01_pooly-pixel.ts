@@ -31,7 +31,7 @@ export default async function deploy(hardhat: HardhatRuntimeEnvironment) {
   poolyPixel.setElement(3, 1, svg4);
 
   await svgRegistry.setWidget(
-    "0x464f554e44455200000000000000000000000000000000000000000000000000",
+    utils.formatBytes32String("PIXEL_POOLY_V0"), // add ethers util string to bytes32
     PoolyPixelSvgModule.address
   );
 
@@ -68,22 +68,22 @@ export default async function deploy(hardhat: HardhatRuntimeEnvironment) {
     log: true,
   });
 
-  const PoolyPixel = await deploy("PoolyPixel", {
-    contract: "PoolyNFT",
+  const PixelPooly = await deploy("PixelPooly", {
+    contract: "PixelPooly",
     from: deployer,
-    args: ["Pooly Pixel", "BIRBI", PoolyPixelStorage.address, deployer],
+    args: ["Pixel Pooly", "PIXPOOLY", PoolyPixelStorage.address],
     skipIfAlreadyDeployed: false,
     log: true,
   });
 
-  const PoolyMinter = await deploy("PoolyMinter", {
-    contract: "PoolyMinter",
-    from: deployer,
-    args: [],
-    skipIfAlreadyDeployed: false,
-    log: true,
-  });
+  // const PoolyMinter = await deploy("PoolyMinter", {
+  //   contract: "PoolyMinter",
+  //   from: deployer,
+  //   args: [],
+  //   skipIfAlreadyDeployed: false,
+  //   log: true,
+  // });
 
-  const pooly = await ethers.getContractAt("PoolyNFT", PoolyPixel.address);
-  await pooly.setMinter(PoolyMinter.address);
+  // const pooly = await ethers.getContractAt("PoolyNFT", PoolyPixel.address);
+  // await pooly.setMinter(PoolyMinter.address);
 }
